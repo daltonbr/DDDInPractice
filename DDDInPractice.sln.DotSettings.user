@@ -1,0 +1,15 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=651244c5_002Df16b_002D4b0f_002Da780_002Dd361b6051897/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;And&gt;
+      &lt;TestAncestor&gt;
+        &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.MoneySpecs.Sum_of_two_moneys_produces_correct_result&lt;/TestId&gt;
+      &lt;/TestAncestor&gt;
+      &lt;Project Location="/Users/dalton/Projects/Studies/DDDInPractice/TestProject1DDDInPractice.Tests" Presentation="&amp;lt;TestProject1DDDInPractice.Tests&amp;gt;" /&gt;
+      &lt;Namespace&gt;TestProject1DDDInPractice.Tests&lt;/Namespace&gt;
+    &lt;/And&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.MoneySpecs.Cannot_create_money_with_negative_value&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
