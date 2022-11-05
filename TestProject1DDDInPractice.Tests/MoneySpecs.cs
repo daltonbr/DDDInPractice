@@ -80,7 +80,7 @@ public class MoneySpecs
     [InlineData(11, 0, 0, 0, 0, 0, 0.11)]
     [InlineData(110, 0, 0, 0, 100, 0, 501.1)]
     public void Amount_is_calculated_correctly(
-        int oneCenterCount,
+        int oneCentCount,
         int tenCentCount,
         int quarterCount,
         int oneDollarCount,
@@ -89,7 +89,7 @@ public class MoneySpecs
         decimal expectedAmount)
     {
         Money money = new Money(
-            oneCenterCount,
+            oneCentCount,
             tenCentCount,
             quarterCount,
             oneDollarCount,
@@ -127,5 +127,30 @@ public class MoneySpecs
         };
 
         action.Should().Throw<InvalidOperationException>();
+    }
+
+    [Theory]
+    [InlineData(1, 0, 0, 0, 0, 0, "¢1")]
+    [InlineData(0, 0, 0, 1, 0, 0, "$1.00 ")]
+    [InlineData(1, 0, 0, 1, 0, 0, "$1.01")]
+    [InlineData(0, 0, 2, 1, 0, 0, "$1.50")]
+    public void To_string_should_return_amount_of_money(
+        int oneCentCount,
+        int tenCentCount,
+        int quarterCount,
+        int oneDollarCount,
+        int fiveDollarCount,
+        int twentyDollarCount,
+        string expectedString)
+    {
+        Money money = new Money(
+            oneCentCount,
+            tenCentCount,
+            quarterCount,
+            oneDollarCount,
+            fiveDollarCount,
+            twentyDollarCount);
+
+        money.ToString().Should().Be(expectedString);
     }
 }
