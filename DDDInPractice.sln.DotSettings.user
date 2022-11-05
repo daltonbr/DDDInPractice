@@ -10,6 +10,8 @@
     &lt;/And&gt;
     &lt;TestAncestor&gt;
       &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.MoneySpecs.Cannot_create_money_with_negative_value&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.MoneySpecs.Amount_is_calculated_correctly&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.MoneySpecs.Cannot_subtract_more_than_exists&lt;/TestId&gt;
     &lt;/TestAncestor&gt;
   &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
