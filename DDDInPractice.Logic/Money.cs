@@ -1,9 +1,15 @@
-using System.Globalization;
-
 namespace DDDInPractice.Logic;
 
 public sealed class Money : ValueObject<Money>
 {
+    public static readonly Money Zero = new(0, 0, 0, 0, 0,0);
+    public static readonly Money OneCent = new(1, 0, 0, 0, 0,0);
+    public static readonly Money TenCent = new(0, 1, 0, 0, 0,0);
+    public static readonly Money Quarter = new(0, 0, 1, 0, 0,0);
+    public static readonly Money OneDollar = new(0, 0, 0, 1, 0,0);
+    public static readonly Money FiveDollar = new(0, 0, 0, 0, 1,0);
+    public static readonly Money TwentyDollar = new(0, 0, 0, 0, 0,1);
+
     public int OneCentCount { get; }
     public int TenCentCount { get; }
     public int QuarterCount { get; }
@@ -80,7 +86,7 @@ public sealed class Money : ValueObject<Money>
         return OneCentCount == other.OneCentCount
                && TenCentCount == other.TenCentCount
                && QuarterCount == other.QuarterCount
-               && OneDollarCount == other.OneCentCount
+               && OneDollarCount == other.OneDollarCount
                && FiveDollarCount == other.FiveDollarCount
                && TwentyDollarCount == other.TwentyDollarCount;
     }

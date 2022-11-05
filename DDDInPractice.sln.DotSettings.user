@@ -1,5 +1,10 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=651244c5_002Df16b_002D4b0f_002Da780_002Dd361b6051897/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=23528a5a_002D8b70_002D47d4_002Dac41_002Dc6fb870f8c4a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Money_in_transaction_goes_to_money_inside_after_purchase" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.SnackMachineSpecs.Money_in_transaction_goes_to_money_inside_after_purchase&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=651244c5_002Df16b_002D4b0f_002Da780_002Dd361b6051897/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Or&gt;
     &lt;And&gt;
       &lt;TestAncestor&gt;
@@ -12,6 +17,20 @@
       &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.MoneySpecs.Cannot_create_money_with_negative_value&lt;/TestId&gt;
       &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.MoneySpecs.Amount_is_calculated_correctly&lt;/TestId&gt;
       &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.MoneySpecs.Cannot_subtract_more_than_exists&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.SnackMachineSpecs.Return_money_empties_money_in_transaction&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.SnackMachineSpecs.Inserted_money_goes_to_money_in_transaction&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.SnackMachineSpecs.Cannot_insert_more_than_one_coin_at_a_time&lt;/TestId&gt;
+      &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.SnackMachineSpecs.Money_in_transaction_goes_to_money_inside_after_purchase&lt;/TestId&gt;
     &lt;/TestAncestor&gt;
   &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ac87360d_002D3ea0_002D4bff_002D8162_002D6d20c8afa37f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Inserted_money_goes_to_money_in_transaction #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.SnackMachineSpecs&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cb83365e_002Df8b6_002D4748_002D9914_002D39d509b60144/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Inserted_money_goes_to_money_in_transaction" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::9A5599A4-6260-4897-A41B-A9E5A345FC35::net6.0::TestProject1DDDInPractice.Tests.SnackMachineSpecs.Inserted_money_goes_to_money_in_transaction&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
