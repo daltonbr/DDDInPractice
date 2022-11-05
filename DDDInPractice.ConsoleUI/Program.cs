@@ -3,17 +3,17 @@ using static DDDInPractice.Logic.Money;
 
 namespace DDDInPractice.ConsoleUI
 {
-    public static class Program
+    public class Program
     {
-        private static SnackMachine Machine { get; } = new();
-        
+        private static readonly MainViewModel ViewModel = new();
+
         public static void Main(string[] args)
         {
             while(true)
             {
                 RenderInitialMenu();
 
-                ReadAndProcessOptions(System.Console.ReadKey().KeyChar);
+                ReadAndProcessOptions(Console.ReadKey().KeyChar);
             }
         }
 
@@ -23,107 +23,90 @@ namespace DDDInPractice.ConsoleUI
             switch (inputUpper)
             {
                 case '1':
-                    System.Console.WriteLine(" Put 1 cent");
+                    Console.WriteLine(" Put 1 cent");
                     InsertMoney(OneCent);
                     break;
                 case '2':
-                    System.Console.WriteLine(" Put 10 cent");
+                    Console.WriteLine(" Put 10 cent");
                     InsertMoney(TenCent);
                     break;
                 case '3':
-                    System.Console.WriteLine(" Put 25 cent");
+                    Console.WriteLine(" Put 25 cent");
                     InsertMoney(Quarter);
                     break;
                 case '4':
-                    System.Console.WriteLine(" Put 1 Dollar");
+                    Console.WriteLine(" Put 1 Dollar");
                     InsertMoney(OneDollar);
                     break;
                 case '5':
-                    System.Console.WriteLine(" Put 5 Dollars");
+                    Console.WriteLine(" Put 5 Dollars");
                     InsertMoney(FiveDollar);
                     break;
                 case '6':
-                    System.Console.WriteLine(" Put 20 Dollars");
+                    Console.WriteLine(" Put 20 Dollars");
                     InsertMoney(TwentyDollar);
                     break;
                 case 'R':
-                    System.Console.WriteLine(" Return Money");
+                    Console.WriteLine(" Return Money");
                     ReturnMoney();
                     break;
                 case 'B':
-                    System.Console.WriteLine(" Buy Snack");
+                    Console.WriteLine(" Buy Snack");
                     BuySnack();
                     break;
                 case 'Q':
-                    System.Console.WriteLine(" Quit");
+                    Console.WriteLine(" Quit");
                     Environment.Exit(0);
                     break;
                 default:
-                    System.Console.WriteLine($"Invalid Option - {input}");
+                    Console.WriteLine($"Invalid Option - {input}");
                     break;
             }
         }
 
-        private static void InsertMoney(Money money)
-        {
-            Machine.InsertMoney(money);
-        }
+        private static void InsertMoney(Money money) => ViewModel.InsertMoney(money);
 
-        private static void ReturnMoney()
-        {
-            Machine.ReturnMoney();
-        }
+        private static void ReturnMoney() => ViewModel.ReturnMoney();
 
-        private static void BuySnack()
-        {
-            Machine.BuySnack();
-        }
-        
-        private static void RenderOutputAndWait()
-        {
-            RenderMachineDetails();
-            System.Console.WriteLine("");
-            System.Console.WriteLine("Press any key to continue...");
-            System.Console.ReadKey();
-        }
+        private static void BuySnack() => ViewModel.BuySnack();
 
         private static void RenderMachineDetails()
         {
-            System.Console.WriteLine($"Credits in current Transaction: $ {Machine.MoneyInTransaction.Amount}");
-            System.Console.WriteLine($"Money Inside: $ {Machine.MoneyInside.Amount}");
+            Console.WriteLine("----------------");
+            Console.WriteLine($"Credits in current Transaction: {ViewModel.GetInTransactionText()}");
+            Console.WriteLine($"Money Inside: {ViewModel.GetMoneyInsideText}");
+            Console.WriteLine("----------------");
         }
 
         private static void RenderInitialMenu()
         {
-            System.Console.Clear();
-            System.Console.WriteLine("Snack Machine PipBoy Terminal");
-            System.Console.WriteLine("----------------");
-            System.Console.WriteLine("Choose an option:");
+            Console.Clear();
+            Console.WriteLine("Snack Machine PipBoy Terminal");
+            Console.WriteLine("----------------");
+            Console.WriteLine("Choose an option:");
 
-            foreach (var menuOption in menuOptions)
+            foreach (var menuOption in MenuOptions)
             {
-                System.Console.WriteLine(menuOption.Value);
+                Console.WriteLine(menuOption);
             }
-            System.Console.WriteLine("----------------");
-            RenderMachineDetails();
-            System.Console.WriteLine("----------------");
 
-            System.Console.Write("\r\nSelect an option: ");
+            RenderMachineDetails();
+
+            Console.Write("\r\nSelect an option: ");
         }
         
-        private static Dictionary<char, string> menuOptions = 
+        private static readonly List<string> MenuOptions = 
             new()
             {
-                ['1'] = "1 - Put 1 cent", 
-                ['2'] = "2 - Put 10 cents",
-                ['3'] = "3 - Put 25 cents",
-                ['4'] = "4 - Put 1 Dollar",
-                ['5'] = "5 - Put 5 Dollars",
-                ['6'] = "6 - Put 20 Dollars",
-
-                ['R'] = "R - Return Money",
-                ['B'] = "B - Buy Snack",
-                ['Q'] = "Q - Quit",
+                "1 - Put 1 cent", 
+                "2 - Put 10 cents",
+                "3 - Put 25 cents",
+                "4 - Put 1 Dollar",
+                "5 - Put 5 Dollars",
+                "6 - Put 20 Dollars",
+                "R - Return Money",
+                "B - Buy Snack",
+                "Q - Quit",
             };
     }
 }
